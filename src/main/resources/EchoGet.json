@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2019-09/schema",
+  "type": "object",
+  "default": {},
+  "title": "Root Schema",
+  "required": [
+    "args",
+    "headers",
+    "url"
+  ],
+  "properties": {
+    "args": {
+      "type": "object",
+      "default": {},
+      "title": "The args Schema",
+      "properties": {},
+      "examples": [{}]
+    },
+    "headers": {
+      "type": "object",
+      "default": {},
+      "title": "The headers Schema",
+      "required": [
+        "x-forwarded-proto",
+        "x-forwarded-port",
+        "host",
+        "x-amzn-trace-id",
+        "accept",
+        "user-agent",
+        "accept-encoding"
+      ],
+      "properties": {
+        "x-forwarded-proto": {
+          "type": "string",
+          "default": "",
+          "title": "The x-forwarded-proto Schema",
+          "examples": [
+            "https"
+          ]
+        },
+        "x-forwarded-port": {
+          "type": "string",
+          "default": "",
+          "title": "The x-forwarded-port Schema",
+          "examples": [
+            "443"
+          ]
+        },
+        "host": {
+          "type": "string",
+          "default": "",
+          "title": "The host Schema",
+          "examples": [
+            "postman-echo.com"
+          ]
+        },
+        "x-amzn-trace-id": {
+          "type": "string",
+          "default": "",
+          "title": "The x-amzn-trace-id Schema",
+          "examples": [
+            "Root=1-6368839f-0247b39242d256a00bdedcb5"
+          ]
+        },
+        "accept": {
+          "type": "string",
+          "default": "",
+          "title": "The accept Schema",
+          "examples": [
+            "*/*"
+          ]
+        },
+        "user-agent": {
+          "type": "string",
+          "default": "",
+          "title": "The user-agent Schema",
+          "examples": [
+            "Apache-HttpClient/4.5.13 (Java/11.0.10)"
+          ]
+        },
+        "accept-encoding": {
+          "type": "string",
+          "default": "",
+          "title": "The accept-encoding Schema",
+          "examples": [
+            "gzip,deflate"
+          ]
+        }
+      }
+    },
+    "url": {
+      "type": "string",
+      "default": "",
+      "title": "The url Schema"
+    }
+  }
+}
